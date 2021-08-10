@@ -1,0 +1,23 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+  width: 100%;
+  padding: 20px;
+  background: #1a202c !important;
+  color: #fff !important;
+}
+
+ul.navbar-nav {
+  flex-direction: unset;
+  color: #fff !important;
+}
+
+li.nav-item {
+  padding-right: 10px;
+}
+
+a.nav-link {
+  color: #ece4e4 !important;
+}
+
+a.navbar-brand {
+  color: #e8e7e7 !important;
+}

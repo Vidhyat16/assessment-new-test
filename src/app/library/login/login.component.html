@@ -1,0 +1,14 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <form (ngSubmit)="login()">
+      <p class="text-danger">{{error}}</p>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Login" [(ngModel)]="username" (input)="error=''">
+      <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password" [(ngModel)]="password" (input)="error=''">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+    <!-- <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div> -->
+
+  </div>
+</div>

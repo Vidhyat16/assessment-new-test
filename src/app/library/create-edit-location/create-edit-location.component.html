@@ -1,0 +1,36 @@
+<div class="wrapper">
+  <div id="formContent">
+    <form #locationForm="ngForm" (ngSubmit)="addUpdateLocation(); locationForm.reset()">
+      <p class="text-center text-success" *ngIf="success">Data saved successfully</p>
+      <div class="fieldGroup">
+        <label>Retailer Name </label>
+        <input type="text" id="name" class="fadeIn second" name="name" placeholder="Retailer Name" required [(ngModel)]="fields.name">
+      </div>
+      <div class="fieldGroup">
+        <label>ZipCode</label>
+        <input type="text" id="ZipCode" class="fadeIn third" name="ZipCode" placeholder="ZipCode" required [(ngModel)]="fields.zipCode">
+      </div>
+      <div class="fieldGroup">
+        <label>Hours of operation</label>
+        <input type="text" id="hours" class="fadeIn third" name="hours" placeholder="operation hours" required  [(ngModel)]="fields.hours">
+      </div>
+      <div class="fieldGroup">
+        <label>Mobile</label>
+        <input type="text" id="hours" class="fadeIn third" name="hours" placeholder="Mobile Number" required  [(ngModel)]="fields.mobileNumber">
+      </div>
+      <div class="fieldGroup">
+        <label>Latitude</label>
+        <input type="text" id="latitude" required class="fadeIn third" name="latitude" placeholder="Latitude"  [(ngModel)]="fields.latitude">
+      </div>
+      <div class="fieldGroup">
+        <label>Longitude</label>
+        <input type="text" id="longitude" class="fadeIn third" name="longitude" placeholder="Longitude" required [(ngModel)]="fields.longitude">
+      </div>
+      <div class="fieldGroup">
+        <label>Ticket</label>
+        <input type="text" id="longitude" class="fadeIn third" name="ticket" placeholder="Ticket" [(ngModel)]="fields.ticket">
+      </div>
+      <input type="submit" class="fadeIn fourth" [disabled]="locationForm.invalid" [value]="editEnabled ? 'Update' : 'Add'">
+    </form>
+  </div>
+</div>

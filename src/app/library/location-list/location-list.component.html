@@ -1,0 +1,26 @@
+<div class='wrapper'>
+  <div class="col-md-12 mb-3">
+    <a class="btn btn-sm btn-primary" (click)="addLocation()">Add Location</a>
+  </div>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">S.No</th>
+        <th scope="col">Retailer Name</th>
+        <th scope="col">ZipCode</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of locationlist; let i = index">
+        <td scope="row">{{i + 1}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.zipCode}}</td>
+        <td style="text-align:center">
+          <button class="btn btn-secondary btn-sm" (click)="editLocation(data)">Edit</button>&nbsp;
+          <button class="btn btn-danger btn-sm" (click)="deleteLocation(data)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
